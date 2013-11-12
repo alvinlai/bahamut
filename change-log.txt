@@ -1,2 +1,6 @@
+1.1
+    - Now requires 10.9
+    - Changed design of track-bar and volume-bar
+
 1.0
     - First public release
