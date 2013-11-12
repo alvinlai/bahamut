@@ -1,5 +1,5 @@
 1.1
-    - Now requires 10.9
+    - Now requires OS X 10.9 (Mavericks)
     - Changed design of track-bar and volume-bar
 
 1.0
