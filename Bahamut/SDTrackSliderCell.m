@@ -22,60 +22,40 @@
         return;
     
     knobRect = [[self controlView] bounds];
-    knobRect = NSInsetRect(knobRect, 4.5, 4.0);
     
-//    knobRect.origin.y += 1.0;
-//    knobRect.size.height -= 1.0;
-    
-    CGFloat knobWidth = 8.0;
-    
+    CGFloat knobWidth = knobRect.size.height;
     CGFloat availWidth = knobRect.size.width - knobWidth;
     
     knobRect.origin.x += (([self doubleValue] / [self maxValue]) * availWidth);
     knobRect.size.width = knobWidth;
     
     knobRect = NSIntegralRect(knobRect);
+    knobRect = NSInsetRect(knobRect, 3.0, 3.0);
     
-    CGFloat innerRadius = 1.0;
     
-//    [[NSColor colorWithCalibratedWhite:0.75 alpha:1.0] setFill];
-//    [ fill];
+    NSBezierPath* path = [NSBezierPath bezierPathWithOvalInRect:knobRect];
     
-//    NSGradient* gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.70 alpha:1.0]
-//                                                         endingColor:[NSColor colorWithCalibratedWhite:0.65 alpha:1.0]];
-    NSGradient* gradient = [[NSGradient alloc] initWithStartingColor:SDMediumBlue
-                                                         endingColor:SDMediumBlue];
+//    knobRect = NSInsetRect(knobRect, 10.0, 0.0);
+//    NSBezierPath* path = [NSBezierPath bezierPathWithRect:knobRect];
     
-    NSBezierPath* path = [NSBezierPath bezierPathWithRoundedRect:knobRect xRadius:innerRadius yRadius:innerRadius];
+    [path setLineWidth:3.0];
     
-    [gradient drawInBezierPath:path angle:90.0];
+    [[NSColor windowBackgroundColor] setFill];
+    [SDDarkBlue setStroke];
+    [path fill];
+    [path stroke];
+    
+//    [SDDarkBlue setFill];
+//    [path fill];
 }
 
 - (void) drawBarInside:(NSRect)aRect flipped:(BOOL)flipped {
     aRect = NSIntegralRect(aRect);
+    aRect = NSInsetRect(aRect, 0.0, 1.0);
+    CGFloat r = 2.0;
     
-//    aRect.origin.y += 1.0;
-//    aRect.size.height -= 1.0;
-    
-    aRect = NSInsetRect(aRect, 1.0, 1.0);
-    
-    CGFloat outerRadius = 3.0;
-    
-//    aRect.origin.y++;
-//    
-//    [[NSColor colorWithCalibratedWhite:0.99 alpha:1.0] setFill];
-//    [[NSBezierPath bezierPathWithRoundedRect:aRect xRadius:outerRadius yRadius:outerRadius] fill];
-//    
-//    aRect.origin.y--;
-    
-    [SDMediumBlue setFill];
-    [[NSBezierPath bezierPathWithRoundedRect:aRect xRadius:outerRadius yRadius:outerRadius] fill];
-    
-    aRect = NSInsetRect(aRect, 1.0, 1.0);
-    outerRadius--;
-    
-    [SDTrackBackgroundColor setFill];
-    [[NSBezierPath bezierPathWithRoundedRect:aRect xRadius:outerRadius yRadius:outerRadius] fill];
+    [[NSColor whiteColor] setFill];
+    [[NSBezierPath bezierPathWithRoundedRect:aRect xRadius:r yRadius:r] fill];
 }
 
 @end

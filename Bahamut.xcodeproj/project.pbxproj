@@ -708,6 +708,7 @@
 				GCC_PREFIX_HEADER = "Bahamut/Bahamut-Prefix.pch";
 				INFOPLIST_FILE = "Bahamut/Bahamut-Info.plist";
 				PRODUCT_NAME = Bahamut;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -724,6 +725,7 @@
 				GCC_PREFIX_HEADER = "Bahamut/Bahamut-Prefix.pch";
 				INFOPLIST_FILE = "Bahamut/Bahamut-Info.plist";
 				PRODUCT_NAME = Bahamut;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
