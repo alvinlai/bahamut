@@ -5,7 +5,7 @@
 *The tiny OS X music player*
 
 * Current version: **1.0**
-* Requires: OS X 10.8 and up
+* Requires: OS X 10.9 and up
 * Download: get [.zip file](https://raw.github.com/sdegutis/bahamut/master/Builds/Bahamut-LATEST.app.tar.gz), unzip, right-click app, choose "Open"
 
 #### Is it for me?
