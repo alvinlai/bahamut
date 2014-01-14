@@ -130,7 +130,10 @@
     NSMutableSet* set = [NSMutableSet set];
     
     for (SDSong* song in allSongs) {
-        [set addObject: song.url];
+        if (song.url)
+            [set addObject: song.url];
+        else
+            [[song managedObjectContext] deleteObject: song];
     }
     
     return set;
