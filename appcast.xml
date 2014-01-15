@@ -6,6 +6,12 @@
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
     <item>
+      <title>Version 1.1.1</title>
+      <sparkle:releaseNotesLink>https://raw.github.com/sdegutis/bahamut/master/change-log.txt</sparkle:releaseNotesLink>
+      <pubDate>Wed Jan 15 12:53:22 CST 2014</pubDate>
+      <enclosure url="https://raw.github.com/sdegutis/bahamut/master/Builds/Bahamut-1.1.1.app.tar.gz" sparkle:version="1.1.1" sparkle:dsaSignature="" length="1515596" type="application/octet-stream"/>
+    </item>
+    <item>
       <title>Version 1.1</title>
       <sparkle:releaseNotesLink>https://raw.github.com/sdegutis/bahamut/master/change-log.txt</sparkle:releaseNotesLink>
       <pubDate>Tue Nov 12 09:55:09 CST 2013</pubDate>
